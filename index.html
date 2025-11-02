@@ -50,18 +50,24 @@
     }
 
     .feature {
-      background-color: #222;
+      background-color: #fff;
       border-radius: 12px;
       width: 250px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+      color: #000;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
     }
 
     .feature img {
       width: 64px;
       height: 64px;
       margin-bottom: 10px;
-      filter: invert(1);
+      filter: none;
     }
 
     .button {
@@ -130,6 +136,7 @@
       <a class="button" href="TBFM.py" download>⬇️ Download TBFM.py</a>
       <a class="button" href="LICENSE" download>📄 Download LICENSE</a>
       <a class="button" href="README.md" download>🧠 Download README</a>
+      <a class="button" href="TBFM.zip" download>🗂️ Download All (ZIP)</a>
     </div>
 
     <p style="margin-top: 15px;">Or view the full project on GitHub:</p>
