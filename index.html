@@ -67,7 +67,7 @@
       width: 64px;
       height: 64px;
       margin-bottom: 10px;
-      filter: none;
+      filter: invert(1); /* ✅ makes white icons visible on white boxes */
     }
 
     .button {
@@ -86,11 +86,20 @@
       background-color: #ff3333;
     }
 
+    pre {
+      background-color: #222;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
     footer {
       background-color: #000;
       padding: 10px;
       color: #888;
       font-size: 0.9em;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -101,7 +110,7 @@
 
   <div class="section">
     <h2>About TBFM</h2>
-    <p>TBFM (Tkinter Based Form Maker) is a lightweight and simple GUI tool for creating Python forms using the Tkinter library.  
+    <p>TBFM (Tkinter Based Form Maker) is a lightweight and simple GUI tool for creating Python forms using the Tkinter library.<br>
     Designed by <strong>Caron Software</strong>, it allows you to easily make form-based windows without coding everything manually!</p>
   </div>
 
