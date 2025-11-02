@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TBFM - Tkinter Based Form Maker</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="TBFM.png">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -63,10 +67,11 @@
       transform: scale(1.05);
     }
 
+    /* Icon background */
     .icon-bg {
       width: 80px;
       height: 80px;
-      margin: 0 auto 10px;
+      margin: 0 auto 15px;
       background-color: #111; 
       border-radius: 50%;
       display: flex;
@@ -78,7 +83,14 @@
     .icon-bg img {
       width: 48px;
       height: 48px;
-      filter: brightness(2); 
+      filter: brightness(2);
+    }
+
+    /* Feature text background for visibility */
+    .feature h3, .feature p {
+      background-color: rgba(255,255,255,0.85);
+      padding: 5px 8px;
+      border-radius: 6px;
     }
 
     .button {
