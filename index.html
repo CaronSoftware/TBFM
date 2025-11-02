@@ -63,11 +63,22 @@
       transform: scale(1.05);
     }
 
-    .feature img {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 10px;
-      filter: invert(1); /* ✅ makes white icons visible on white boxes */
+    .icon-bg {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 10px;
+      background-color: #111; /* dark circle background */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .icon-bg img {
+      width: 48px;
+      height: 48px;
+      filter: brightness(2); /* brighten white icons slightly */
     }
 
     .button {
@@ -118,19 +129,25 @@
     <h2>Features</h2>
     <div class="features">
       <div class="feature">
-        <img src="icon1.png" alt="Easy to use">
+        <div class="icon-bg">
+          <img src="icon1.png" alt="Easy to use">
+        </div>
         <h3>Easy to Use</h3>
         <p>Simple interface that anyone can use to make forms.</p>
       </div>
 
       <div class="feature">
-        <img src="icon2.png" alt="Custom Icons">
+        <div class="icon-bg">
+          <img src="icon2.png" alt="Custom Icons">
+        </div>
         <h3>Custom Icons</h3>
         <p>Set custom icons for your forms easily (TBFM.ico).</p>
       </div>
 
       <div class="feature">
-        <img src="icon3.png" alt="About Menu">
+        <div class="icon-bg">
+          <img src="icon3.png" alt="About Menu">
+        </div>
         <h3>About Menu</h3>
         <p>See app info quickly using the built-in About menu.</p>
       </div>
