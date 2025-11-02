@@ -1,165 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TBFM - Tkinter Based Form Maker</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TBFM - Tkinter Based Form Maker</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
 
-        header {
-            background-color: #e63946;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #e63946;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
 
-        header img {
-            width: 80px;
-            display: block;
-            margin: 0 auto 10px;
-        }
+    header img {
+        width: 80px;
+        display: block;
+        margin: 0 auto 10px;
+    }
 
+    header h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin: 10px 0 0 0;
+    }
+
+    main {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        color: #e63946;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .feature-item {
+        flex: 1 1 200px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    }
+
+    .feature-item img {
+        width: 50px;
+        margin-bottom: 10px;
+        filter: invert(1); /* makes white icons visible on white background */
+    }
+
+    .screenshot img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #e63946;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #d62828;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f1f1f1;
+        color: #555;
+    }
+
+    @media (max-width: 600px) {
         header h1 {
-            font-size: 3em;
-            margin: 0;
+            font-size: 2em;
         }
-
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0 0;
-        }
-
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            color: #e63946;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
         .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .feature-item {
-            flex: 1 1 200px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .feature-item img {
-            width: 50px;
-            margin-bottom: 10px;
-        }
-
-        .screenshot img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #e63946;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .button:hover {
-            background-color: #d62828;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f1f1f1;
-            color: #555;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <header>
-        <img src="TBFM.png" alt="TBFM Logo">
-        <h1>TBFM</h1>
-        <p>Tkinter Based Form Maker</p>
-    </header>
+<header>
+    <img src="TBFM.png" alt="TBFM Logo">
+    <h1>TBFM</h1>
+    <p>Tkinter Based Form Maker</p>
+</header>
 
-    <main>
-        <div class="section">
-            <h2>About TBFM</h2>
-            <p>TBFM (Tkinter Based Form Maker) is a Python tool that allows you to visually design GUI forms using Tkinter. 
-            It's perfect for quickly creating windows and generating Python code for your forms.</p>
-        </div>
+<main>
+    <div class="section">
+        <h2>About TBFM</h2>
+        <p>TBFM (Tkinter Based Form Maker) is a Python tool that lets you visually design GUI forms using Tkinter. 
+        It's perfect for quickly creating windows and generating Python code for your forms.</p>
+    </div>
 
-        <div class="section">
-            <h2>Features</h2>
-            <div class="features">
-                <div class="feature-item">
-                    <img src="icon1.png" alt="Easy to use">
-                    <h3>Easy to Use</h3>
-                    <p>Simple interface that anyone can use to make forms.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="icon2.png" alt="Custom Icons">
-                    <h3>Custom Icons</h3>
-                    <p>Set custom icons for your forms easily (TBFM.ico).</p>
-                </div>
-                <div class="feature-item">
-                    <img src="icon3.png" alt="About Menu">
-                    <h3>About Menu</h3>
-                    <p>See app info quickly using the built-in About menu.</p>
-                </div>
+    <div class="section">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <img src="icon1.png" alt="Easy to use">
+                <h3>Easy to Use</h3>
+                <p>Simple interface that anyone can use to make forms.</p>
+            </div>
+            <div class="feature-item">
+                <img src="icon2.png" alt="Custom Icons">
+                <h3>Custom Icons</h3>
+                <p>Set custom icons for your forms easily (TBFM.ico).</p>
+            </div>
+            <div class="feature-item">
+                <img src="icon3.png" alt="About Menu">
+                <h3>About Menu</h3>
+                <p>See app info quickly using the built-in About menu.</p>
             </div>
         </div>
+    </div>
 
-        <div class="section screenshot">
-            <h2>Screenshot</h2>
-            <img src="TBFM.png" alt="TBFM Screenshot">
-        </div>
+    <div class="section screenshot">
+        <h2>Screenshot</h2>
+        <img src="TBFM.png" alt="TBFM Screenshot">
+    </div>
 
-        <div class="section">
-            <h2>Download / Run TBFM</h2>
-            <p>You can download TBFM from GitHub or run it if you have Python installed:</p>
-            <a class="button" href="https://github.com/CaronSoftware/TBFM" target="_blank">View on GitHub</a>
-            <p>To run locally:</p>
-            <pre>python TBFM.py</pre>
-        </div>
+    <div class="section">
+        <h2>Download / Run TBFM</h2>
+        <p>You can download TBFM from GitHub or run it if you have Python installed:</p>
+        <a class="button" href="https://github.com/CaronSoftware/TBFM" target="_blank">View on GitHub</a>
+        <p>To run locally:</p>
+        <pre>python TBFM.py</pre>
+    </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Created by <strong>Caron</strong> © 2025. For questions, you can use GitHub issues or contact via your preferred method.</p>
-        </div>
-    </main>
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Created by <strong>Caron</strong> © 2025. For questions, you can use GitHub issues or your preferred contact method.</p>
+    </div>
+</main>
 
-    <footer>
-        &copy; 2025 Caron Software
-    </footer>
+<footer>
+    &copy; 2025 Caron Software — All rights reserved.
+</footer>
 </body>
 </html>
