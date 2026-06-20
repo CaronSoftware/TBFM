@@ -1,7 +1,7 @@
 ![TBFM Logo](TBFM.png)
 # 🧩 TBFM - Tkinter Based Form Maker
 
-**Version:** 1.0  
+**Latest Version:** 1.0  
 **Creator:** © 2026 Amirfazel Ehtesham
 **License:** GNU GPL v3  
 
