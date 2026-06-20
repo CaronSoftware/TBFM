@@ -15,8 +15,7 @@ It’s great for quickly building windows and generating the Python code behind 
 
 ## 🚀 Features
 - Create Tkinter windows and forms easily  
-- Simple, intuitive interface  
-- “About” menu with app info  
+- Simple, intuitive interface    
 - Custom icons
 
 ---
